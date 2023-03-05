@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/purple_200">
+    </TextView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_fun"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_registrarpersona"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:clipToPadding="false"
+            android:text="@string/bt_regper"
+            android:textSize="24sp"
+            android:autoSizeTextType="none"
+            app:cornerRadius="50dp"
+            app:backgroundTintMode="@color/purple_200"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_buscar"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:clipToPadding="false"
+            android:text="@string/bt_bus"
+            android:textSize="24sp"
+            android:autoSizeTextType="none"
+            app:backgroundTintMode="@color/purple_200"
+            app:cornerRadius="50dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_registrarcita"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:clipToPadding="false"
+            android:text="@string/bt_regcit"
+            android:textSize="24sp"
+            android:autoSizeTextType="none"
+            app:backgroundTintMode="@color/purple_200"
+            app:cornerRadius="50dp"/>
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

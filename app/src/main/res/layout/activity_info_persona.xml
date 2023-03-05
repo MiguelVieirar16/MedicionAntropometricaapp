@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="top"
+    tools:context=".InfoPersona">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/purple_200">
+    </TextView>
+    <ProgressBar
+        android:id="@+id/progress_bar6"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/CardPersonInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:background="@color/purple_200">
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="30dp"
+                        android:text="Nombre y apellido: "
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:autoSizeTextType="uniform"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/id_blanco"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewCel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="19dp"
+                            android:text="Número de cédula: "
+                            android:textColor="@color/white"
+                            android:autoSizeTextType="uniform"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/textViewCedula"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:text="Numero de cedula: "
+                            android:paddingRight="10dp"
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_baseline_calendar_month_24"
+                            android:layout_marginTop="20dp">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewCum"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="19dp"
+                            android:text="Fecha de \nnacimiento"
+                            android:textColor="@color/white"
+                            android:autoSizeTextType="uniform"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewCumple"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Fecha de nacimiento: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_baseline_local_phone_24"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewTelf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Número de \nteléfono: "
+                            android:textColor="@color/white"
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/textViewTelefono"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Numero de telefono: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_baseline_email_24_blanco"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewCor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Correo \nelectrónico:  "
+                            android:textColor="@color/white"
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/textViewCorreo"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Correo electrónico: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_baseline_location_on_24_blanco">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewDir"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Dirección de \nhabitación:  "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/textViewDirrecion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Dirección de habitación: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/sex_blanco"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewSex"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Género de la \npersona:  "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/textViewSexo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Género de la persona: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_baseline_school_24_blanco"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewCol"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Instituto donde \nestudia:  "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewColegio"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Instituto donde estudia: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_baseline_perm_identity_24"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewNombre_pa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Nombre de su \nrepresentante: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewNombre_papa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Instituto donde estudia: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/job_blanco"></ImageView>
+
+                        <TextView
+                            android:id="@+id/textViewPapa_tra"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Trabajo de su \nrepresentante: "
+                            android:autoSizeTextType="uniform"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewPapa_trabajo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Instituto donde estudia: "
+                            android:autoSizeTextType="uniform"
+                            android:paddingRight="10dp"
+                            android:textSize="19dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="117dp"
+        android:layout_height="161dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        app:borderWidth="2dp"
+        app:srcCompat="@drawable/mas_blanicono"/>
+</RelativeLayout>

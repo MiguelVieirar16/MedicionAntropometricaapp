@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.RangoCincoEmbarazadasFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_estatura"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:startIconDrawable="@drawable/estatura"
+                    android:hint="Introduzca la estatura de la persona en metros (m)"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_estatura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textSize="19dp"
+                        android:autoSizeTextType="uniform"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_cbi"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Introduzca la circunferencia del brazo izquierdo en milímetros (mm)"
+                    app:errorEnabled="true"
+                    app:startIconDrawable="@drawable/brazo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_cbi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textSize="19dp"
+                        android:autoSizeTextType="uniform"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Llenar en caso de estar embarazada"
+                        android:textColor="@color/purple_200"
+                        android:textSize="15dp"
+                        android:autoSizeTextType="uniform"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="20dp"
+                        style="@style/Divider"/>
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBoxEmbarazada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Marque la casilla si se encuentra embarazada"
+                    android:textSize="19dp"
+                    android:textStyle="bold"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_gananciaPeso3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Ganancia de peso expresada en kilogramos (kg)"
+                    app:errorEnabled="true"
+                    android:focusable="true"
+                    app:startIconDrawable="@drawable/aumento_peso">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_gananciaPeso3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textSize="19dp"
+                        android:focusable="true"
+                        android:autoSizeTextType="uniform"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_semanas_2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Semanas de gestación"
+                    app:errorEnabled="true"
+                    android:clickable="false"
+                    app:startIconDrawable="@drawable/calendario_mama">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_semanas_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:clickable="false"
+                        android:textSize="19dp"
+                        android:autoSizeTextType="uniform"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
