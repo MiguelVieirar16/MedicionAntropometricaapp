@@ -42,7 +42,8 @@
             android:textSize="24sp"
             android:autoSizeTextType="none"
             app:cornerRadius="50dp"
-            app:backgroundTintMode="@color/purple_200"/>
+            app:backgroundTintMode="@color/purple_200"
+            android:drawableLeft="@drawable/register"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/bt_buscar"
@@ -56,7 +57,8 @@
             android:textSize="24sp"
             android:autoSizeTextType="none"
             app:backgroundTintMode="@color/purple_200"
-            app:cornerRadius="50dp" />
+            app:cornerRadius="50dp"
+            android:drawableLeft="@drawable/buscar_person"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/bt_registrarcita"
@@ -70,7 +72,8 @@
             android:textSize="24sp"
             android:autoSizeTextType="none"
             app:backgroundTintMode="@color/purple_200"
-            app:cornerRadius="50dp"/>
+            app:cornerRadius="50dp"
+            android:drawableLeft="@drawable/cita"/>
     </LinearLayout>
     </ScrollView>
 
