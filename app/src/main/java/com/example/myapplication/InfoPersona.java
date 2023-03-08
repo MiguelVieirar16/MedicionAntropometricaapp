@@ -242,8 +242,19 @@ public class InfoPersona extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), Buscar.class);
-        startActivity(intent);
+        if(statecheck){
+            Intent intent = new Intent(getApplicationContext(), Buscar.class);
+            intent.putExtra("cedula", datosUsuarios.getCedula());
+            intent.putExtra("stateCheck", statecheck);
+            intent.putExtra("control",false);
+            startActivity(intent);
+        }else {
+            Intent intent = new Intent(getApplicationContext(), Buscar.class);
+            intent.putExtra("cedula", datosUsuarios.getCedula());
+            intent.putExtra("stateCheck", statecheck);
+            intent.putExtra("control", true);
+            startActivity(intent);
+        }
     }
 
     public static void EliminarCita(Context context, String uuid){

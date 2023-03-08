@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent i = new Intent(getApplicationContext(),Buscar.class);
+                i.putExtra("control",false);
                 startActivity(i);
             }
         });
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent i = new Intent(getApplicationContext(),Buscar.class);
+                i.putExtra("control",false);
                 startActivity(i);
             }
         });

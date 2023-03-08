@@ -39,6 +39,7 @@ import java.util.UUID;
 
 public class Registrar extends AppCompatActivity {
     private FirebaseFirestore db;
+    private DatosUsuarios datosUsuario;
     private Spinner spinner_telf, spinner_mes, spinner_sexo;
     private TextInputLayout il_name, il_cedula, il_correor, il_telefonor, il_direccionr,
             il_colegio, il_dia,  il_año, il_papa, il_trabajo;
@@ -108,13 +109,18 @@ public class Registrar extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                        i.putExtra("control",false);
                         startActivity(i);
                     }
                 }).setNegativeButton(Html.fromHtml("<big> Ir a guardar una historia </big>"), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent i = new Intent(getApplicationContext(),Buscar.class);
+                        i.putExtra("cedula", datosUsuario.getCedula());
+                        i.putExtra("stateCheck", checkBox.isChecked());
+                        i.putExtra("control",true);
                         startActivity(i);
+
                     }
                 });
         AlertDialog alertDialog = builder.create();
@@ -146,7 +152,7 @@ public class Registrar extends AppCompatActivity {
                                 //snack.SnackMessage(getString(R.string.usuario_registrado), R.color.error);
                             } else {
                                 il_cedula.setError(null);
-                                DatosUsuarios datosUsuario = new DatosUsuarios(cedula, nombre, colegio, correo, nombre_papa, direccion,
+                                datosUsuario = new DatosUsuarios(cedula, nombre, colegio, correo, nombre_papa, direccion,
                                         numerotelefonico, nacimiento, trabajo, sexo, null);
                                 db.collection("Usuarios").document(cedula).set(datosUsuario)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -203,7 +209,7 @@ public class Registrar extends AppCompatActivity {
                                             //snack.SnackMessage("No se pudo crear el usuario", R.color.error);
                                         }
                                     });
-                                DatosUsuarios datosUsuario = new DatosUsuarios(cedula, nombre, colegio, correo, nombre_papa, direccion,
+                                datosUsuario = new DatosUsuarios(cedula, nombre, colegio, correo, nombre_papa, direccion,
                                     numerotelefonico, nacimiento, trabajo, sexo,uuid);
                                 db.collection("UsuariosPadres").document(cedula)
                                         .collection("hijos")

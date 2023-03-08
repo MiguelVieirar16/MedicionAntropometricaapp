@@ -50,7 +50,7 @@ public class Buscar extends AppCompatActivity {
     private static DatosUsuarios datosUsuarios;
     private static Context context;
     static List<DatosUsuarios> items = new ArrayList<>();
-    private static boolean statecheck;
+    private static boolean statecheck, control;
     private static String uuid_hijos = null;
 
     public Buscar(Context context){
@@ -82,6 +82,16 @@ public class Buscar extends AppCompatActivity {
         bt_buscarCedula = findViewById(R.id.bt_buscarCedula);
         checkboxBuscar = findViewById(R.id.checkboxBuscar);
 
+        control = (boolean) getIntent().getExtras().getSerializable("control");
+
+        if(control){
+            String cedula = (String) getIntent().getExtras().getSerializable("cedula");
+            boolean statecheck = (boolean) getIntent().getExtras().getSerializable("stateCheck");
+            il_buscarCedula.getEditText().setText(cedula);
+            checkboxBuscar.setChecked(statecheck);
+            BuscarUsuario(cedula);
+        }
+
         try{
             if(!items.isEmpty()){
             items.clear();
@@ -92,15 +102,16 @@ public class Buscar extends AppCompatActivity {
         bt_buscarCedula.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BuscarUsuario();
+                String identificacion = il_buscarCedula.getEditText().getText().toString().trim();
+                BuscarUsuario(identificacion);
                 items.clear();
             }
         });
     }
 
-    public void BuscarUsuario(){
+    public void BuscarUsuario(String identificacion){
         progressBar.setVisibility(View.VISIBLE);
-        String identificacion = il_buscarCedula.getEditText().getText().toString().trim();
+        //String identificacion = il_buscarCedula.getEditText().getText().toString().trim();
         if(identificacion.isEmpty()){
             Toast.makeText(this,"Introduzca una cedula", LENGTH_SHORT).show();
             progressBar.setVisibility(View.INVISIBLE);

@@ -142,7 +142,8 @@
                             android:backgroundTint="@color/purple_200"
                             android:overlapAnchor="true"
                             android:spinnerMode="dropdown"
-                            android:textAlignment="viewEnd"
+
+                            android:layout_gravity="center"
                             android:textSize="19dp"
                             android:theme="@style/MatchSpinnerTheme" />
 
@@ -203,12 +204,13 @@
                         android:layout_height="51dp"
                         android:layout_marginTop="7dp"
                         android:layout_marginBottom="10dp"
+                        android:gravity="center|right"
                         android:background="@drawable/border_spinner"
                         tools:ignore="UselessParent">
 
                         <Spinner
                             android:id="@+id/spinner_sexo"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:backgroundTint="@color/purple_200"
                             android:overlapAnchor="true"
@@ -309,7 +311,8 @@
                     <LinearLayout
                         android:id="@+id/horizontal1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="7dp"
                         android:layout_weight="1"
